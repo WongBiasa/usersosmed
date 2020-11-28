@@ -24,9 +24,10 @@ print 0.06
 echo "subscribe youtubme https://youtube.com/c/Catatannewbie"
 sleep 0.08
 echo "MASUKKAN NAMA YANG INGIN KAMU CARI:"
-echo 0.07
+sleep 0.07
 read username
 echo "nama : $username"
+echo "======================================================"
 if [[ -e $username.txt ]]; then
 rm -rf $user.txt
 fi
@@ -46,7 +47,7 @@ check_face=$(curl -s "https://www.facebook.com/$username" -L -H "Accept-Language
 
 
 if [[ $check_face == *'1'* ]]; then
-printf "\e[1;92m Found!\e[0m https://www.facebook.com/%s\n" $username
+printf "\e[1;92m Ada cok!\e[0m https://www.facebook.com/%s\n" $username
 printf "https://www.facebook.com/%s\n" $username >> $username.txt
 elif [[ $check_face == *'0'* ]]; then
 printf "\e[1;93mTidak Ada/Not Found!\e[0m\n"
@@ -57,7 +58,7 @@ check_twitter=$(curl -s "https://www.twitter.com/$username" -L -H "Accept-Langua
 
 
 if [[ $check_twitter == *'1'* ]]; then
-printf "\e[1;92m Found!\e[0m https://www.twitter.com/%s\n" $username
+printf "\e[1;92m Ada cok!\e[0m https://www.twitter.com/%s\n" $username
 printf "https://www.twitter.com/%s\n" $username >> $username.txt
 elif [[ $check_twitter == *'0'* ]]; then
 printf "\e[1;93mTidak Ada/Not Found!\e[0m\n"
@@ -68,7 +69,7 @@ check_youtube=$(curl -s "https://www.youtube.com/$username" -L -H "Accept-Langua
 
 
 if [[ $check_youtube == *'1'* ]]; then
-printf "\e[1;92m Found!\e[0m https://www.youtube.com/%s\n" $username
+printf "\e[1;92m Ada cok!\e[0m https://www.youtube.com/%s\n" $username
 printf "https://www.youtube.com/%s\n" $username >> $username.txt
 elif [[ $check_youtube == *'0'* ]]; then
 printf "\e[1;93mTidak Ada/Not Found!\e[0m\n"
@@ -81,7 +82,7 @@ check=$(curl -s "https://$username.blogspot.com" -L -H "Accept-Language: en" -i 
 
 
 if [[ $check == *'1'* ]]; then
-printf "\e[1;92m Found!\e[0m https://%s.blogspot.com\n" $username
+printf "\e[1;92m Ada cok!\e[0m https://%s.blogspot.com\n" $username
 printf "https://%s.blogspot.com\n" $username >> $username.txt
 elif [[ $check == *'0'* ]]; then
 printf "\e[1;93mTidak Ada/Not Found!\e[0m\n"
@@ -94,7 +95,7 @@ check=$(curl -s "https://plus.google.com/+$username/posts" -L -H "Accept-Languag
 
 
 if [[ $check == *'1'* ]]; then
-printf "\e[1;92m Found!\e[0m https://plus.google.com/+%s/posts\n" $username
+printf "\e[1;92m Ada cok!\e[0m https://plus.google.com/+%s/posts\n" $username
 printf "https://plus.google.com/+%s/posts\n" $username >> $username
 elif [[ $check == *'0'* ]]; then
 printf "\e[1;93mTidak Ada/Not Found!\e[0m\n"
@@ -122,7 +123,7 @@ if [[ $check1 == *'0'* ]] ; then
 printf "\e[1;93mTidak Ada/Not Found!\e[0m\n"
 elif [[ $check1 == *'1'* ]]; then 
 
-printf "\e[1;92m Found!\e[0m https://%s.wordpress.com\n" $username
+printf "\e[1;92m Ada cok!\e[0m https://%s.wordpress.com\n" $username
 printf "https://%s.wordpress.com\n" $username >> $username.txt
 fi
 
@@ -135,7 +136,7 @@ if [[ $check1 == *'0'* ]] ; then
 printf "\e[1;93mTidak Ada/Not Found!\e[0m\n"
 elif [[ $check1 == *'1'* ]]; then 
 
-printf "\e[1;92m Found!\e[0m https://www.pinterest.com/%s\n" $username
+printf "\e[1;92m Ada cok!\e[0m https://www.pinterest.com/%s\n" $username
 printf "https://www.pinterest.com/%s\n" $username >> $username.txt
 fi
 
@@ -148,7 +149,7 @@ if [[ $check1 == *'0'* ]] ; then
 printf "\e[1;93mTidak Ada/Not Found!\e[0m\n"
 elif [[ $check1 == *'1'* ]]; then 
 
-printf "\e[1;92m Found!\e[0m https://www.github.com/%s\n" $username
+printf "\e[1;92m Ada cok!\e[0m https://www.github.com/%s\n" $username
 printf "https://www.github.com/%s\n" $username >> $username.txt
 fi
 
