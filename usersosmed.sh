@@ -20,7 +20,7 @@ echo ":!:  !:!      !:!   :!:       :!:  !:!      !:!   :!:  !:!      !:!  #+#  
 echo "::::: ::  :::: ::    :: ::::  ::   :::  :::: ::   ::::: ::  :::: ::  #+#       #+#   :: ::::   :::: ::"
 echo " : :  :   :: : :    : :: ::    :   : :  :: : :     : :  :   :: : :   ###       ###   :::::::   :::::::"
 echo
-print 0.06
+sleep 0.06
 echo "subscribe youtubme https://youtube.com/c/Catatannewbie"
 sleep 0.08
 echo "MASUKKAN NAMA YANG INGIN KAMU CARI:"
